@@ -1,7 +1,7 @@
 #coding: utf-8
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.order("id desc").all
 
     respond_to do |format|
       format.html # index.html.erb
