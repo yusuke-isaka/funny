@@ -12,7 +12,7 @@
 <h6><i class="icon-time"></i><%= @post.created_at%></h6>
 <br/>
 <div class="fb-share-button" data-href="<%= post_url(@post)%>" data-type="box_count"></div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= post_url(post)%>" data-lang="ja" data-text="<%= post.title %>">ツイート</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= post_url(@post)%>" data-lang="ja" data-text="<%= @post.title %>">ツイート</a>
 <br/><br/>
 <p>
 	<%= @post.content.html_safe %>
