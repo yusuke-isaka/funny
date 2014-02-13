@@ -8,12 +8,14 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 </script>
+
 <% @posts.each do |post| %>
 	<h3><%= link_to post.title, post_path(post) %></h3>
 	<h6><i class="icon-time"></i><%= post.created_at%></h6>
 	<br/>
-	<div class="fb-share-button" data-href="<%= post_url(post)%>" data-type="box_count"></div>
-	<a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= post_url(post)%>" data-lang="ja">ツイート</a>
+	<div class="fb-share-button" data-href=<%= post_url(post)%>" data-type="box_count"></div>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= post_url(post)%>" data-lang="ja data-text="<%= post.title %>"">ツイート</a>
+
 	<br/><br/>
 	<p>
 		<%= post.thumbnail.html_safe %>
